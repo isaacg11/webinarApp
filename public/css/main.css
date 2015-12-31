@@ -22,3 +22,8 @@ html, body{
 	color: #fff;
 	width: 100%;
 }
+.signupBtn:hover{
+	background-color: #b7bac8;
+	color: #fff;
+	width: 100%;
+}
