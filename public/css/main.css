@@ -27,3 +27,21 @@ html, body{
 	color: #fff;
 	width: 100%;
 }
+
+/*stamplay101*/
+.schedule{
+	border:4px double #fff;
+}
+.registerInput{
+	width: 85%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 40px;
+}
+.submitButton{
+	margin-top: 15px;
+	width:85%;
+	background-color: #29a329;
+	color: #fff;
+	margin-bottom: 15px;
+}
