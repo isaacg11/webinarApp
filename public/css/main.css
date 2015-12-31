@@ -3,9 +3,9 @@ html, body{
 	font-family: "Roboto";
 	color: #fff;
 }
-/*.hide{
+.blend{
 	color: #272D4E;
-}*/
+}
 .light{
 	font-weight: lighter;
 }
