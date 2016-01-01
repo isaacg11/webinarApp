@@ -1,9 +1,18 @@
 
 Stamplay.init('webinars');
 
+
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+
+  $('#modal1').openModal();
+
 //UPDATE WEBINAR DATE ON WINDOW LOAD
 window.onload = function(){
-//GLOBAL VARIABLES
+
+//GLOBAL DAY/DATE VARIABLES
 	var Today = new Date();
 	var weekday = new Array(7);
 	weekday[0]=  "Sunday";
@@ -118,10 +127,11 @@ window.onload = function(){
 	else if(Today > May18 && Today < May25) {
 		document.getElementById('dateOfWebinar').innerHTML = "Wed Apr 5/25/16";
 	}
-};	
+
+};
+
 
 //REGISTER TO STAMPLAY 101
-
 	function registerToStamplay101(){
 		document.getElementById('loaderCircle').className = "center";
 		var first = document.getElementById('first').value;
@@ -152,5 +162,17 @@ window.onload = function(){
 
 	}
 
+//LOGIN TO ADMIN
+
+	function login(){
+		var em = document.getElementById('email').value;
+		var pass = document.getElementById('password').value;
+
+		var user = new Stamplay.User().Model;
+          user.login(em, pass)
+          .then(function(){
+          	window.location = "admin.html";
+		});
+	}
 
 

@@ -27,8 +27,10 @@ html, body{
 	color: #fff;
 	width: 100%;
 }
-
-/*stamplay101*/
+.selectionHeader{
+  color: #272D4E;
+}
+/*stamplay101 & hacker news*/
 
 .registerInput{
 	width: 85%;
@@ -217,4 +219,19 @@ h5{
     right: 5%;
     transform: skew(00deg,-40deg);
   }
+}
+
+/*MODAL*/
+#modal1{
+  color: #000;
+  width: 30%;
+  border-radius: 4px;
+  border: 7px double #666666;
+  /*height: 30vh;*/
+}
+
+.loginInput{
+  width: 95%;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
