@@ -6,30 +6,32 @@
 	<link rel="stylesheet" type="text/css" href="public/css/materialize.css">
 	<link rel="stylesheet" type="text/css" href="public/css/materialize.min.css">
 	<link rel="stylesheet" type="text/css" href="public/css/main.css">
+	<link rel="stylesheet" type="text/css" href="public/css/animate.css">
 </head>
 <body>
 <br>
-	<div class="row center">
+<!--COMPANY LOGO-->
+	<div class="row center animated fadeIn">
 		<div class="col s12">
 			<img class="responsive-img" src="public/images/educate.gif"/>
 		</div>
 	</div>
 <!--PARENT HEADER-->
 	<div class="row">
-		<div class="col s12 center">
+		<div class="col s12 center animated fadeIn">
 			<h3>Stamplay 101</h3>
 			<h5><em>Build a to-do app with Angular.js & Stamplay</em></h5>
 		</div>
 	</div>
 <!-- RIBBON 1 -->
-<div class="container one">
+<div class="container one animated fadeIn">
  	<div class="bk l">
     	<div class="arrow top"></div> 
     	<div class="arrow bottom"></div>
   	</div>
   	<div class="skew l"></div>
   	<div class="main">
-			<h5 class="bannerHeader center"><span id="dateOfWebinar"></span> @ 10:00am PST</h5>
+			<h5 class="bannerHeader center"> <span id="dateOfWebinar"></span> @ 10:00am PST</h5>
   	</div>
   	<div class="skew r"></div>
   	<div class="bk r">
@@ -37,27 +39,58 @@
     	<div class="arrow bottom"></div>
   	</div>
 </div>
-
-	<div class="row">
+<!-- WEBINAR REGISTRATION -->
+	<h4 
+		id="confirmMessage" 
+		class="hide">Thank you! Your seat confirmation is being sent to your email.
+	</h4>
+	<div id="stamplay101RegisterSection" class="row animated fadeIn">
 		<div class="col l4 m1 s1 blend">.</div>
 		<div class="col l4 m10 s10">
 			<div class="webinarSelection z-depth-1 center">
-				<h5 class="light black-text">Register</h5>
-				<input class="registerInput" placeholder="FIRST NAME..."/>
-				<input class="registerInput" placeholder="LAST NAME..."/>
-				<input class="registerInput" placeholder="EMAIL..."/>
-				<input class="registerInput" placeholder="ORGANIZATION..."/>
-				<a href="stamplay101.html">
-					<input class="submitButton" value="Submit" type="button"/>
-				</a>
+				<h5 class="light black-text">Webinar Registration</h5>
+				<input
+					id="first" 
+					class="registerInput" 
+					placeholder="FIRST NAME..."/>
+				<input
+					id="last" 
+					class="registerInput" 
+					placeholder="LAST NAME..."/>
+				<input
+					id="em" 
+					class="registerInput" 
+					placeholder="EMAIL..."/>
+				<input
+					id="org" 
+					class="registerInput" 
+					placeholder="ORGANIZATION..."/>
+				<input
+					onclick="registerToStamplay101()" 
+					class="submitButton" 
+					value="Submit" 
+					type="button"/>
 			</div>
 		</div>
 		<div class="col l4 m1 s1 blend">.</div>
 	</div>
 	<br>
-	<br>
 
-	<p class="center">
+	<div id="loaderCircle" class="hide center">
+	<div class="preloader-wrapper small active">
+    <div class="spinner-layer spinner-white-only center">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  	</div>
+  	</div>
+
+	<p class="center animated fadeIn">
 		<a class="backLink" href="index.html">BACK TO WEBINARS</a>
 	</p>
 	<p class="center">2015 Stamplay, All Rights Reserved</p>

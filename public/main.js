@@ -1,6 +1,7 @@
 
-//UPDATE WEBINAR DATE
+Stamplay.init('webinars');
 
+//UPDATE WEBINAR DATE ON WINDOW LOAD
 window.onload = function(){
 //GLOBAL VARIABLES
 	var Today = new Date();
@@ -119,6 +120,37 @@ window.onload = function(){
 	}
 };	
 
+//REGISTER TO STAMPLAY 101
+
+	function registerToStamplay101(){
+		document.getElementById('loaderCircle').className = "center";
+		var first = document.getElementById('first').value;
+		var last = document.getElementById('last').value;
+		var em = document.getElementById('em').value;
+		var org = document.getElementById('org').value;
+
+		var objectInstance = new Stamplay.Cobject('stamplay101').Model;
+        objectInstance.set('firstName', first);
+        objectInstance.set('lastName', last);
+        objectInstance.set('email', em);
+        objectInstance.set('organization', org);
+        objectInstance.save().then(function(){
+
+			document.getElementById('stamplay101RegisterSection').className = "row animated zoomOut";
+			setTimeout(showMessage, 1000);
+
+			function showMessage(){
+				document.getElementById('confirmMessage').className = "center animated zoomIn";
+				document.getElementById('loaderCircle').className = "hide center";
+
+          		document.getElementById('first').value = "";
+				document.getElementById('last').value = "";
+				document.getElementById('em').value = "";
+				document.getElementById('org').value = "";
+			}
+		});
+
+	}
 
 
 
