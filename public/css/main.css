@@ -240,7 +240,9 @@ h5{
 }
 .settingsSection{
   background-color: #fff;
+  color: #000;
 }
 .settingsHeader{
-  color: #666666;
+  color: #fff;
+  font-weight: lighter;
 }

@@ -1,3 +1,19 @@
+Stamplay.init('webinars');
+
+
+window.onload = function(){
+
+//GET WEBINAR DATA
+  var objectInstance = new Stamplay.Cobject('webinar1').Model;
+  objectInstance.fetch('568899a93b7a92633575ca99').then(function() {
+    var webinarTitle = objectInstance.instance.title;
+    var webinarDescription = objectInstance.instance.description;
+
+    document.getElementById('webinar1Title').innerHTML = webinarTitle;
+    document.getElementById('webinar1Description').innerHTML = webinarDescription;
+  });
+};
+
 
 //LOGIN TO ADMIN
 
