@@ -48,6 +48,12 @@ window.onload = function(){
 		document.getElementById('opt6').className = "";
 		document.getElementById('opt7').className = "";
 	}
+//OPEN EDIT FOR TIME 1
+	function openEditForTime1(){
+		document.getElementById('newTime1Input').className = "browser-default";
+		document.getElementById('newAMPM1Input').className = "browser-default";
+		document.getElementById('newTime1Btn').className = "";
+	}
 
 //CHANGE TITLE 1
 	function changeTitle1(){
@@ -79,6 +85,35 @@ window.onload = function(){
 		var objectInstance1 = new Stamplay.Cobject('webinar1').Model;
     	objectInstance1.fetch('568899a93b7a92633575ca99').then(function() {
         	objectInstance1.set('description', newDescription);
+        	objectInstance1.save().then(function(){
+        		location.reload();
+        	});
+    	});
+	}
+
+//CHANGE DAY 1
+	function changeDay1(){
+		var select = document.getElementById("newDay1Input");
+		var Day1 = select.options[select.selectedIndex].value;
+		var objectInstance1 = new Stamplay.Cobject('webinar1').Model;
+    	objectInstance1.fetch('568899a93b7a92633575ca99').then(function() {
+        	objectInstance1.set('day', Day1);
+        	objectInstance1.save().then(function(){
+        		location.reload();
+        	});
+    	});
+	}
+
+//CHANGE TIME 1
+	function changeTime1(){
+		var selectTime = document.getElementById("newTime1Input");
+		var Time1 = selectTime.options[selectTime.selectedIndex].value;
+		var selectAMPM = document.getElementById("newAMPM1Input");
+		var AMPM1 = selectAMPM.options[selectAMPM.selectedIndex].value;
+		var objectInstance1 = new Stamplay.Cobject('webinar1').Model;
+    	objectInstance1.fetch('568899a93b7a92633575ca99').then(function() {
+        	objectInstance1.set('time', Time1);
+        	objectInstance1.set('ampm', AMPM1);
         	objectInstance1.save().then(function(){
         		location.reload();
         	});
