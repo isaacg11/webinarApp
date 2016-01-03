@@ -17,6 +17,7 @@ window.onload = function(){
         document.getElementById('webinar1Day').innerHTML = webinar1Day;
         document.getElementById('webinar1Time').innerHTML = webinar1Time;
         document.getElementById('webinar1AMPM').innerHTML = webinar1AMPM;
+
     });
 };
 
