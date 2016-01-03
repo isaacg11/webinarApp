@@ -235,3 +235,12 @@ h5{
   padding-top: 5px;
   padding-bottom: 5px;
 }
+#toastObj{
+  color: red;
+}
+.settingsSection{
+  background-color: #fff;
+}
+.settingsHeader{
+  color: #666666;
+}
