@@ -22,16 +22,20 @@ Stamplay.init('webinars');
 //LOGIN TO ADMIN
 
 	$scope.login = function(){
+
 		var answer = prompt("ENTER ACCESS CODE");
 
-          if(answer === "st4mpl4y4pps"){
+    var objectInstance = new Stamplay.Cobject('code').Model;
+    objectInstance.fetch('568af131247342ea6c2cbfa1').then(function() {
+      var accessCode = objectInstance.instance.accessCode;
+          if(answer === accessCode){
           	$state.go('Admin');
           }
-
           else{
           	var $toastContent = $('<span id="toastObj">Incorrect Passcode</span>');
   			Materialize.toast($toastContent, 5000);
   			}
+      });
 	};
 
 }
