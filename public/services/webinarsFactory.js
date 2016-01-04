@@ -11,7 +11,7 @@ Stamplay.init('webinars');
   function webinarsFactory($http, $q) {
 
   return {
-    getWebinarsForAdmin : function(){
+    getWebinars : function(){
       var q = $q.defer();
       var webinarCollection = new Stamplay.Cobject('webinar1').Collection;
       webinarCollection.equalTo("deleted_status", false).fetch().then(function(){
@@ -60,6 +60,20 @@ Stamplay.init('webinars');
           q.resolve();
         });
       });
+      return q.promise;
+    },
+    signup : function(info){
+      console.log(info);
+      var q = $q.defer();
+      var objectInstance = new Stamplay.Cobject('signups').Model;
+        objectInstance.set('firstName', info.firstName);
+        objectInstance.set('lastName', info.lastName);
+        objectInstance.set('email', info.email);
+        objectInstance.set('organization', info.organization);
+        objectInstance.set('webinar', info.webinar);
+        objectInstance.save().then(function(){
+          q.resolve();
+        });
       return q.promise;
     }
 

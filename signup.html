@@ -1,0 +1,74 @@
+<div ng-controller="signupController">
+
+<!--COMPANY LOGO-->
+	<div class="row center animated fadeIn">
+		<div class="col s12">
+			<img class="responsive-img" src="public/images/educate.gif"/>
+		</div>
+	</div>
+<!--PARENT HEADER-->
+	<div class="row">
+		<div class="col s12 center animated fadeIn">
+			<h3><span class="white-text" id="webinar1Title"></span></h3>
+			<h5><em><span id="webinarSubTitle"></span></em></h5>
+		</div>
+	</div>
+<!-- RIBBON 1 -->
+	<div class="container one animated fadeIn">
+ 	<div class="bk l">
+    	<div class="arrow top"></div> 
+    	<div class="arrow bottom"></div>
+  	</div>
+  	<div class="skew l"></div>
+  	<div class="main">
+			<h5 class="bannerHeader center"> <span id="dateOfWebinar"></span></h5>
+  	</div>
+  	<div class="skew r"></div>
+  	<div class="bk r">
+    	<div class="arrow top"></div> 
+    	<div class="arrow bottom"></div>
+  	</div>
+	</div>
+<!--REGISTER SECTION-->
+	<p 
+		id="message" 
+		class="hide">Thank you! A confirmation has been sent to your email.
+	</p>
+	<div id="stamplay101RegisterSection" class="row animated fadeIn">
+		<div class="col l4 m1 s1 blend">.</div>
+		<div class="col l4 m10 s10">
+			<div id="registerForm" class="webinarSelection z-depth-1 center">
+				<h5 class="light black-text">Webinar Registration</h5>
+				<input
+					ng-model="first" 
+					class="registerInput" 
+					placeholder="FIRST NAME..."/>
+				<input
+					ng-model="last" 
+					class="registerInput" 
+					placeholder="LAST NAME..."/>
+				<input
+					ng-model="em" 
+					class="registerInput" 
+					placeholder="EMAIL..."/>
+				<input
+					ng-model="org" 
+					class="registerInput" 
+					placeholder="ORGANIZATION..."/>
+				<input
+					ng-click="register()" 
+					class="submitButton" 
+					value="Submit" 
+					type="button"/>
+			</div>
+		</div>
+		<div class="col l4 m1 s1 blend">.</div>
+	</div>
+
+<!--CLOSING DIV-->
+</div>
+
+<!--FOOTER-->
+	<br>
+	<p class="center"><a class="backLink" href="index.html">BACK TO WEBINARS</a></p>
+	<p class="center">2015 Stamplay, All Rights Reserved</p>

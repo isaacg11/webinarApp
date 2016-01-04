@@ -43,6 +43,11 @@ function Config($stateProvider, $urlRouterProvider) {
 		templateUrl: '/add.html',
 		controller: 'addController'
 	});
+	$stateProvider.state('Signup',{
+		url: '/signup/:id',
+		templateUrl: '/signup.html',
+		controller: 'signupController'
+	});
 	$urlRouterProvider.otherwise('/');
 	}
 

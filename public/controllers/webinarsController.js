@@ -10,15 +10,13 @@ Stamplay.init('webinars');
 
   function webinarsController(webinarsFactory, $state, $http, $scope, $stamplay){
 
-window.onload = function(){
 
 //GET WEBINAR DATA
-  var objectInstance = new Stamplay.Cobject('webinar1').Model;
-  objectInstance.fetch('568899a93b7a92633575ca99').then(function() {
-    var webinarTitle = objectInstance.instance.title;
-    var webinarDescription = objectInstance.instance.description;
+  $scope.allWebinars = $scope.allWebinars ? $scope.allWebinars : [];
+
+  webinarsFactory.getWebinars().then(function(webinars){
+    $scope.allWebinars = webinars;
   });
-};
 
 
 //LOGIN TO ADMIN
