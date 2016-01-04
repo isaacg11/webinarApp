@@ -260,6 +260,10 @@ input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([
   background-color: #fff;
   color: #000;
   border:7px double #272D4E;
+  height: auto;
+  width: 30%;
+  padding: 5px;
+
 }
 .settingsHeader{
   color: #fff;

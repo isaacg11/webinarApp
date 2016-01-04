@@ -10,6 +10,14 @@ Stamplay.init('webinars');
 
   function adminController(webinarsFactory, $state, $http, $scope, $stamplay){
 
+  //GLOBAL VARIABLES
+  var user = new Stamplay.User().Model;
+  $scope.allWebinars = $scope.allWebinars ? $scope.allWebinars : [];
+
+    webinarsFactory.getWebinarsForAdmin().then(function(webinars){
+      $scope.allWebinars = webinars;
+    });
+
 
 }
 })();

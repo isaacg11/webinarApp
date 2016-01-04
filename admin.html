@@ -15,121 +15,26 @@
 		<div class="col s2 blend">.</div>
 	</div>
 <!--ADMIN PANEL-->
-	<div class="row">
-		<div class="col s4 blend">.</div>
-		<div class="col s4 settingsSection z-depth-1">
-			<h5 class="center">Webinar 1</h5>
-			<br>
-			<p class="indSetting">
-				<a class="editLink" onclick="openEditForTitle1()">(Edit)</a> <b>Title</b>: <span id="webinar1Title"></span>
-			</p>
-			<input 
-				class="hide" 
-				id="newTitle1Input" 
-				placeholder="ENTER NEW TITLE..." 
-				type="text"/>
-			<input
-				type="button"
-				value="Update" 
-				class="hide"
-				id="newTitle1Btn"
-				onclick="changeTitle1()">
-			<p class="indSetting">
-				<a class="editLink" onclick="openEditForSubTitle1()">(Edit)</a> <b>Subtitle</b>: <span id="webinar1SubTitle"></span>
-			</p>
-			<input 
-				class="hide" 
-				id="newSubTitle1Input" 
-				placeholder="ENTER NEW SUBTITLE..." 
-				type="text"/>
-			<input
-				type="button"
-				value="Update" 
-				class="hide"
-				id="newSubTitle1Btn"
-				onclick="changeSubTitle1()">
-			<p class="indSetting">
-				<a class="editLink" onclick="openEditForDescription1()">(Edit)</a> <b>Description</b>: <span id="webinar1Description"></span>
-			</p>
-			<textarea 
-				class="hide" 
-				id="newDescription1Input" 
-				placeholder="ENTER NEW DESCRIPTION...">
-			</textarea>
-			<input
-				type="button"
-				value="Update" 
-				class="hide"
-				id="newDescription1Btn"
-				onclick="changeDescription1()">
-			<p class="indSetting">
-				<a class="editLink" onclick="openEditForDay1()">(Edit)</a> <b>Occurs once a week on</b>: <span id="webinar1Day"></span>
-			</p>
-			<select id="newDay1Input" class="browser-default hide">
-    			<option id="optdef" class="hide" value="" disabled selected>Pick a day</option>
-    			<option id="opt1" class="flat" value="Monday">Monday</option>
-    			<option id="opt2" class="flat" value="Tuesday">Tuesday</option>
-    			<option id="opt3" class="flat" value="Wednesday">Wednesday</option>
-    			<option id="opt4" class="flat" value="Thursday">Thursday</option>
-    			<option id="opt5" class="flat" value="Friday">Friday</option>
-    			<option id="opt6" class="flat" value="Saturday">Saturday</option>
-    			<option id="opt7" class="flat" value="Sunday">Sunday</option>
-  			</select>
-			<input
-				type="button"
-				value="Update" 
-				class="hide"
-				id="newDay1Btn"
-				onclick="changeDay1()">
-			<p class="indSetting">
-				<a class="editLink" onclick="openEditForTime1()">(Edit)</a> <b>Time</b>: <span id="webinar1Time"></span> <span id="webinar1AMPM"></span>
-			</p>
-			<div class="row">
-				<div class="col s6">
-					<select id="newTime1Input" class="browser-default hide">
-    					<option id="optdef" class="hide" value="" disabled selected>Pick a time</option>
-    					<option value="12:00">12:00</option>
-    					<option value="11:00">11:00</option>
-    					<option value="10:00">10:00</option>
-    					<option value="9:00">9:00</option>
-    					<option value="8:00">8:00</option>
-    					<option value="7:00">7:00</option>
-    					<option value="6:00">6:00</option>
-    					<option value="5:00">5:00</option>
-    					<option value="4:00">4:00</option>
-    					<option value="3:00">3:00</option>
-    					<option value="2:00">2:00</option>
-    					<option value="1:00">1:00</option>
-  					</select>
-  				</div>
-  				<div class="col s6">
-  					<select id="newAMPM1Input" class="browser-default hide">
-    					<option id="optdef" class="hide" value="" disabled selected>AM/PM</option>
-    					<option value="am">am</option>
-    					<option value="pm">pm</option>
-  					</select>
-  				</div>
-  			</div>
-			<input
-				type="button"
-				value="Update" 
-				class="hide"
-				id="newTime1Btn"
-				onclick="changeTime1()">
-		</div>
-		<div class="col s4 blend">.</div>
-		<div class="col s8">
-			<div id="output"></div>
-		</div>
-		<div class="col s4 blend">.</div>
-
-<!--CLOSING ROW-->
+	<div 
+		ng-repeat="webinar in allWebinars" 
+		class="container settingsSection z-depth-1">
+		<span><b>Title</b>: {{webinar.instance.title}}</span>
+		<br>
+		<span><b>Subtitle</b>: {{webinar.instance.subtitle}}</span>
+		<br>
+		<span><b>Description</b>: {{webinar.instance.description}}</span>
+		<br>
+		<span><b>Occurs once a week on</b>: {{webinar.instance.day}}</span>
+		<br>
+		<span><b>Time</b>: {{webinar.instance.time}} {{webinar.instance.ampm}}</span>
 	</div>
+<!--CLOSING DIV-->
+</div>
+
 <!--FOOTER-->
-	<br>
+<!-- 	<br>
 	<br>
 	<p class="center"><a class="backLink" href="index.html">BACK TO WEBINARS</a></p>
-	<p class="center">2015 Stamplay, All Rights Reserved</p>
+	<p class="center">2015 Stamplay, All Rights Reserved</p> -->
 
-<!--CLOSING DIV-->
-	</div>
+
