@@ -91,6 +91,16 @@ input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([
 .webinarSettings{
   width: 100%;
 }
+.updateBtn{
+  background-color: #888DA4;
+  color: #fff;
+  width: 100%;
+}
+.updateBtn:hover{
+  background-color: #b7bac8;
+  color: #fff;
+  width: 100%;
+}
 /*RIBBON*/
 * {
   box-sizing: border-box;

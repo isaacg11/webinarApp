@@ -19,13 +19,20 @@ Stamplay.init('webinars');
       });
       return q.promise;
     },
-    editTitle : function(title, id){
+    editWebinar : function(id, details){
       var q = $q.defer();
-      var webinarInstance = new Stamplay.Cobject('webinar1').Model;
-      webinarInstance.fetch(id).then(function(){
-        webinarInstance.set('title', title);
-        webinarInstance.save();
-        q.resolve();
+      var objectInstance = new Stamplay.Cobject('webinar1').Model;
+      objectInstance.fetch(id).then(function() {
+        var newTitle = details.title;
+        objectInstance.set('title', newTitle);
+        objectInstance.set('subtitle', details.subtitle);
+        objectInstance.set('description', details.description);
+        objectInstance.set('day', details.day);
+        objectInstance.set('time', details.time);
+        objectInstance.set('ampm', details.ampm);
+        objectInstance.save().then(function(){
+          q.resolve();
+        });
       });
       return q.promise;
     }
