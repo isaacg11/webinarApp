@@ -14,7 +14,7 @@ Stamplay.init('webinars');
     getWebinarsForAdmin : function(){
       var q = $q.defer();
       var webinarCollection = new Stamplay.Cobject('webinar1').Collection;
-      webinarCollection.equalTo("type", "webinar").fetch().then(function(){
+      webinarCollection.equalTo("deleted_status", false).fetch().then(function(){
         q.resolve(webinarCollection.instance);
       });
       return q.promise;
@@ -45,10 +45,21 @@ Stamplay.init('webinars');
         objectInstance.set('day', details.day);
         objectInstance.set('time', details.time);
         objectInstance.set('ampm', details.ampm);
-        objectInstance.set('type', "webinar");
+        objectInstance.set('deleted_status', false);
         objectInstance.save().then(function(){
           q.resolve();
         });
+      return q.promise;
+    },
+    eraseWebinar : function(id){
+      var q = $q.defer();
+      var objectInstance = new Stamplay.Cobject('webinar1').Model;
+      objectInstance.fetch(id).then(function() {
+        objectInstance.set('deleted_status', true);
+        objectInstance.save().then(function(){
+          q.resolve();
+        });
+      });
       return q.promise;
     }
 

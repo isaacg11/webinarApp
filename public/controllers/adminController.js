@@ -10,7 +10,7 @@ Stamplay.init('webinars');
 
   function adminController(webinarsFactory, $state, $http, $scope, $stamplay){
 
-  //GLOBAL VARIABLES
+//GLOBAL VARIABLES
   var user = new Stamplay.User().Model;
   $scope.allWebinars = $scope.allWebinars ? $scope.allWebinars : [];
 
@@ -18,9 +18,13 @@ Stamplay.init('webinars');
       $scope.allWebinars = webinars;
     });
 
-  $scope.openEditForTitle = function(id){
-    
-    };
+//DELETE WEBINAR
+$scope.deleteWebinar = function(id){
+
+  webinarsFactory.eraseWebinar(id).then(function(){
+    $state.reload();
+  });
+};
 
 }
 })();
