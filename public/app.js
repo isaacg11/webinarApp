@@ -38,11 +38,11 @@ function Config($stateProvider, $urlRouterProvider) {
 		templateUrl: '/edit.html',
 		controller: 'editController'
 	});
-	// $stateProvider.state('Catalog',{
-	// 	url: '/catalog',
-	// 	templateUrl: '/catalog.html',
-	// 	controller: 'objectController'
-	// });
+	$stateProvider.state('Add',{
+		url: '/add',
+		templateUrl: '/add.html',
+		controller: 'addController'
+	});
 	$urlRouterProvider.otherwise('/');
 	}
 

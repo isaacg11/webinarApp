@@ -1,0 +1,81 @@
+<div ng-controller="addController">
+
+	<!--COMPANY LOGO-->
+	<div class="row center animated fadeIn">
+		<div class="col s12">
+			<img class="responsive-img" src="public/images/educate.gif"/>
+		</div>
+	</div>
+<!--MAIN HEADER-->
+	<div class="row">
+		<div class="col s2 blend">.</div>
+		<div class="col s8 center animated fadeIn">
+			<h4 class="center settingsHeader"><i class="fa fa-bolt"></i> New Webinar</h4>
+		</div>
+		<div class="col s2 blend">.</div>
+	</div>
+<!--EDIT SECTION-->
+	<div 
+		class="container settingsSection z-depth-1">
+		<p><b>Title</b></p>
+		<input class="webinarSettings" id="webinarTitle"/>
+		<p><b>Subtitle</b></p>
+		<input class="webinarSettings" id="webinarSubTitle"/>
+		<p><b>Description</b></p>
+		<input class="webinarSettings" id="webinarDescription"/>
+		<p><b>Occurs once a week on</b></p>
+  		<select id="webinarDay" class="webinarSettings browser-default">
+    		<option value="" disabled selected>Pick a day</option>
+    		<option value="Monday">Monday</option>
+    		<option value="Tuesday">Tuesday</option>
+    		<option value="Wednesday">Wednesday</option>
+    		<option value="Thursday">Thursday</option>
+    		<option value="Friday">Friday</option>
+    		<option value="Saturday">Saturday</option>
+    		<option value="Sunday">Sunday</option>
+  		</select>
+		<p><b>Time</b></p>
+		<div class="row">
+			<div class="col s6">
+				<select id="webinarTime" class="webinarSettings browser-default">
+    				<option value="" disabled selected>Time</option>
+    				<option value="12:00">12:00</option>
+    				<option value="11:00">11:00</option>
+    				<option value="10:00">10:00</option>
+    				<option value="9:00">9:00</option>
+    				<option value="8:00">8:00</option>
+    				<option value="7:00">7:00</option>
+    				<option value="6:00">6:00</option>
+    				<option value="5:00">5:00</option>
+    				<option value="4:00">4:00</option>
+    				<option value="3:00">3:00</option>
+    				<option value="2:00">2:00</option>
+    				<option value="1:00">1:00</option>
+  				</select>
+				<br>
+				<br>
+			</div>
+			<div class="col s6">
+				<select id="webinarAMPM" class="webinarSettings browser-default">
+    				<option value="" disabled selected>AM/PM</option>
+    				<option value="am">am</option>
+    				<option value="pm">pm</option>
+  				</select>
+			</div>
+			<div class="col s12 center">
+				<input
+				ng-click="addWebinar()" 
+				type="button" 
+				class="updateBtn center" 
+				value="Save" />
+			</div>
+			<br>
+			<br>
+		</div>
+	</div>
+	<br>
+<!--FOOTER-->
+	<p class="center"><a class="backLink" ui-sref="Admin">BACK TO ADMIN</a></p>
+	<p class="center">2015 Stamplay, All Rights Reserved</p>
+<!--CLOSING DIV-->
+</div>

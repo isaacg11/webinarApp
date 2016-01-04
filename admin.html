@@ -10,7 +10,10 @@
 	<div class="row">
 		<div class="col s2 blend">.</div>
 		<div class="col s8 center animated fadeIn">
-			<h4 class="center settingsHeader"><i class="fa fa-gear small"></i> Settings</h4>
+			<h4 class="center settingsHeader">
+				<i class="fa fa-gear small"></i> Webinar Settings
+			</h4>
+			<p class="center"><a class="backLink" ui-sref="Add">ADD WEBINAR + </a></p>
 		</div>
 		<div class="col s2 blend">.</div>
 	</div>
@@ -18,28 +21,29 @@
 	<div 
 		ng-repeat="webinar in allWebinars" 
 		class="container settingsSection z-depth-1">
-		<span>
+		<p class="editSetting">
 			<b>Title</b>: <span ng-model="title">{{webinar.instance.title}}
-		</span>
-		<br>
-		<span><b>Subtitle</b>: {{webinar.instance.subtitle}}</span>
-		<br>
-		<span><b>Description</b>: {{webinar.instance.description}}</span>
-		<br>
-		<span><b>Occurs once a week on</b>: {{webinar.instance.day}}</span>
-		<br>
-		<span><b>Time</b>: {{webinar.instance.time}} {{webinar.instance.ampm}}</span>
-		<br>
+		</p>
+		<p class="editSetting">
+			<b>Subtitle</b>: {{webinar.instance.subtitle}}
+		</p>
+		<p class="editSetting">
+			<b>Description</b>: {{webinar.instance.description}}
+		</p>
+		<p class="editSetting">
+			<b>Occurs once a week on</b>: {{webinar.instance.day}}
+		</p>
+		<p class="editSetting">
+			<b>Time</b>: {{webinar.instance.time}} {{webinar.instance.ampm}}
+		</p>
 		<a ui-sref="Edit({id: webinar.instance._id})">(Edit)</a>
 
 	</div>
 <!--CLOSING DIV-->
 </div>
-
 <!--FOOTER-->
-<!-- 	<br>
 	<br>
 	<p class="center"><a class="backLink" href="index.html">BACK TO WEBINARS</a></p>
-	<p class="center">2015 Stamplay, All Rights Reserved</p> -->
+	<p class="center">2015 Stamplay, All Rights Reserved</p>
 
 

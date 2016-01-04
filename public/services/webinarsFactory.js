@@ -35,7 +35,23 @@ Stamplay.init('webinars');
         });
       });
       return q.promise;
+    },
+    addWebinar : function(details){
+      var q = $q.defer();
+      var objectInstance = new Stamplay.Cobject('webinar1').Model;
+        objectInstance.set('title', details.title);
+        objectInstance.set('subtitle', details.subtitle);
+        objectInstance.set('description', details.description);
+        objectInstance.set('day', details.day);
+        objectInstance.set('time', details.time);
+        objectInstance.set('ampm', details.ampm);
+        objectInstance.set('type', "webinar");
+        objectInstance.save().then(function(){
+          q.resolve();
+        });
+      return q.promise;
     }
+
   };
 
 

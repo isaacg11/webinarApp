@@ -101,6 +101,9 @@ input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([
   color: #fff;
   width: 100%;
 }
+.editSetting{
+  border-bottom: 2px solid #EEEEEE;
+}
 /*RIBBON*/
 * {
   box-sizing: border-box;
