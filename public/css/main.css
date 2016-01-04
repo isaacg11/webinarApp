@@ -88,8 +88,8 @@ input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([
 .editLink{
   cursor: pointer;
 }
-.flat{
-  height: 0px;
+.webinarSettings{
+  width: 100%;
 }
 /*RIBBON*/
 * {

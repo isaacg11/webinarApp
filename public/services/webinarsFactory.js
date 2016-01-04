@@ -18,6 +18,16 @@ Stamplay.init('webinars');
         q.resolve(webinarCollection.instance);
       });
       return q.promise;
+    },
+    editTitle : function(title, id){
+      var q = $q.defer();
+      var webinarInstance = new Stamplay.Cobject('webinar1').Model;
+      webinarInstance.fetch(id).then(function(){
+        webinarInstance.set('title', title);
+        webinarInstance.save();
+        q.resolve();
+      });
+      return q.promise;
     }
   };
 

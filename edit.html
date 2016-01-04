@@ -1,0 +1,40 @@
+<div ng-controller="editController">
+
+	<!--COMPANY LOGO-->
+	<div class="row center animated fadeIn">
+		<div class="col s12">
+			<img class="responsive-img" src="public/images/educate.gif"/>
+		</div>
+	</div>
+<!--MAIN HEADER-->
+	<div class="row">
+		<div class="col s2 blend">.</div>
+		<div class="col s8 center animated fadeIn">
+			<h4 class="center settingsHeader"><i class="fa fa-pencil"></i> Edit</h4>
+		</div>
+		<div class="col s2 blend">.</div>
+	</div>
+<!--EDIT SECTION-->
+	<div 
+		class="container settingsSection z-depth-1">
+		<p><b>Title</b></p>
+		<input class="webinarSettings" id="webinarTitle"/>
+		<p><b>Subtitle</b></p>
+		<input class="webinarSettings" id="webinarSubTitle"/>
+		<p><b>Description</b></p>
+		<input class="webinarSettings" id="webinarDescription"/>
+		<p><b>Occurs once a week on</b></p>
+		<input class="webinarSettings" id="webinarDay"/>
+		<p><b>Time</b></p>
+		<input class="webinarSettings" id="webinarTime"/>
+		<br>
+		<br>
+		<input type="button" class="signupBtn center" value="Update" />
+	</div>
+	<br>
+<!--FOOTER-->
+	<p class="center"><a class="backLink" ui-sref="Admin">BACK TO ADMIN</a></p>
+	<p class="center">2015 Stamplay, All Rights Reserved</p>
+<!--CLOSING DIV-->
+</div>
+

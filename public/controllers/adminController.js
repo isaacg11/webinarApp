@@ -18,6 +18,9 @@ Stamplay.init('webinars');
       $scope.allWebinars = webinars;
     });
 
+  $scope.openEditForTitle = function(id){
+    
+    };
 
 }
 })();

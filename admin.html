@@ -18,7 +18,9 @@
 	<div 
 		ng-repeat="webinar in allWebinars" 
 		class="container settingsSection z-depth-1">
-		<span><b>Title</b>: {{webinar.instance.title}}</span>
+		<span>
+			<b>Title</b>: <span ng-model="title">{{webinar.instance.title}}
+		</span>
 		<br>
 		<span><b>Subtitle</b>: {{webinar.instance.subtitle}}</span>
 		<br>
@@ -27,6 +29,9 @@
 		<span><b>Occurs once a week on</b>: {{webinar.instance.day}}</span>
 		<br>
 		<span><b>Time</b>: {{webinar.instance.time}} {{webinar.instance.ampm}}</span>
+		<br>
+		<a ui-sref="Edit({id: webinar.instance._id})">(Edit)</a>
+
 	</div>
 <!--CLOSING DIV-->
 </div>

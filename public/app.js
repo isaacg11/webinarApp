@@ -33,11 +33,11 @@ function Config($stateProvider, $urlRouterProvider) {
 		templateUrl: '/admin.html',
 		controller: 'adminController'
 	});
-	// $stateProvider.state('Objects',{
-	// 	url: '/objects',
-	// 	templateUrl: '/objects.html',
-	// 	controller: 'objectController'
-	// });
+	$stateProvider.state('Edit',{
+		url: '/edit/:id',
+		templateUrl: '/edit.html',
+		controller: 'editController'
+	});
 	// $stateProvider.state('Catalog',{
 	// 	url: '/catalog',
 	// 	templateUrl: '/catalog.html',

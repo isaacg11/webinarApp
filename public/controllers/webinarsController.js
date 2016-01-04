@@ -17,8 +17,6 @@ window.onload = function(){
   objectInstance.fetch('568899a93b7a92633575ca99').then(function() {
     var webinarTitle = objectInstance.instance.title;
     var webinarDescription = objectInstance.instance.description;
-
-    
   });
 };
 
