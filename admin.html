@@ -18,27 +18,32 @@
 		<div class="col s2 blend">.</div>
 	</div>
 <!--ADMIN PANEL-->
-	<div 
-		ng-repeat="webinar in allWebinars" 
-		class="container settingsSection z-depth-1">
-		<p class="editSetting">
-			<b>Title</b>: <span ng-model="title">{{webinar.instance.title}}
-		</p>
-		<p class="editSetting">
-			<b>Subtitle</b>: {{webinar.instance.subtitle}}
-		</p>
-		<p class="editSetting">
-			<b>Description</b>: {{webinar.instance.description}}
-		</p>
-		<p class="editSetting">
-			<b>Occurs once a week on</b>: {{webinar.instance.day}}
-		</p>
-		<p class="editSetting">
-			<b>Time</b>: {{webinar.instance.time}} {{webinar.instance.ampm}}
-		</p>
-		<a ui-sref="Edit({id: webinar.instance._id})">(Edit)</a>
-		<a class="pointer" ng-click="deleteWebinar(webinar.instance._id)">(Delete)</a>
-
+	<div class="row">
+		<div class="col l4 m2 s1 blend">.</div>
+		<div class="col l4 m8 s10">
+			<div 
+				ng-repeat="webinar in allWebinars" 
+				class="settingsSection z-depth-1">
+				<p class="editSetting">
+					<b>Title</b>: <span ng-model="title">{{webinar.instance.title}}</span>
+				</p>
+				<p class="editSetting">
+					<b>Subtitle</b>: {{webinar.instance.subtitle}}
+				</p>
+				<p class="editSetting">
+					<b>Description</b>: {{webinar.instance.description}}
+				</p>
+				<p class="editSetting">
+					<b>Occurs once a week on</b>: {{webinar.instance.day}}
+				</p>
+				<p class="editSetting">
+					<b>Time</b>: {{webinar.instance.time}} {{webinar.instance.ampm}}
+				</p>
+				<a ui-sref="Edit({id: webinar.instance._id})">(Edit)</a>
+				<a class="pointer" ng-click="deleteWebinar(webinar.instance._id)">(Delete)</a>
+			</div>
+		</div>
+		<div class="col l4 m2 s1 blend">.</div>
 	</div>
 <!--CLOSING DIV-->
 </div>

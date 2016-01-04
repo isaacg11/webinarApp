@@ -16,23 +16,30 @@
 	</div>
 	<br>
 <!--WEBINARS-->
-<div 
-	ng-repeat="webinar in allWebinars" 
-	class="container settingsSection z-depth-1">
-	<h5 class="editSetting center">
-		<span ng-model="title">{{webinar.instance.title}}
-	</h5>
-	<p class="editSetting">
-		{{webinar.instance.description}}
-	</p>
-	<input
-		ui-sref="Signup({id: webinar.instance._id})" 
-		type="button" 
-		class="signupBtn" 
-		value="Signup">
+<div class="row">
+	<div class="col l4 m2 s1 blend">.</div>
+	<div class="col l4 m8 s10">
+		<div 
+			ng-repeat="webinar in allWebinars" 
+			class="settingsSection z-depth-1">
+			<h5 class="editSetting center">
+				<span ng-model="title">{{webinar.instance.title}}</span>
+			</h5>
+			<p class="editSetting">
+				{{webinar.instance.description}}
+			</p>
+			<input
+				ui-sref="Signup({id: webinar.instance._id})" 
+				type="button" 
+				class="signupBtn" 
+				value="Signup">
+		</div>
+	</div>
+	<div class="col l4 m2 s1 blend">.</div>
 </div>
-
 <!--FOOTER-->
+	<br>
+	<br>
 	<div class="center">
 		<span 
 			class="center backLink"> 

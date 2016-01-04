@@ -26,27 +26,22 @@ function Config($stateProvider, $urlRouterProvider) {
 	$stateProvider.state('Webinars',{
 		url: '/',
 		templateUrl: '/webinars.html',
-		controller: 'webinarsController'
 	});
 	$stateProvider.state('Admin',{
 		url: '/admin',
 		templateUrl: '/admin.html',
-		controller: 'adminController'
 	});
 	$stateProvider.state('Edit',{
 		url: '/edit/:id',
 		templateUrl: '/edit.html',
-		controller: 'editController'
 	});
 	$stateProvider.state('Add',{
 		url: '/add',
 		templateUrl: '/add.html',
-		controller: 'addController'
 	});
 	$stateProvider.state('Signup',{
 		url: '/signup/:id',
-		templateUrl: '/signup.html',
-		controller: 'signupController'
+		templateUrl: '/signup.html'
 	});
 	$urlRouterProvider.otherwise('/');
 	}
