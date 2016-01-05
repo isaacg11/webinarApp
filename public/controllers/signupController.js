@@ -266,7 +266,12 @@ Stamplay.init('webinars');
       lastName: $scope.last,
       email: $scope.em,
       organization: $scope.org,
-      webinar: webinarTitle
+      webinar: $scope.title,
+      webinarSubtitle: $scope.subtitle,
+      webinarDay: $scope.day,
+      webinarDate: $scope.date,
+      webinarTime: $scope.time,
+      webinarAMPM: $scope.ampm
     };
 
     webinarsFactory.signup(registerInfo).then(function(){

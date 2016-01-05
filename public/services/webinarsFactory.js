@@ -23,8 +23,7 @@ Stamplay.init('webinars');
       var q = $q.defer();
       var objectInstance = new Stamplay.Cobject('webinar1').Model;
       objectInstance.fetch(id).then(function() {
-        var newTitle = details.title;
-        objectInstance.set('title', newTitle);
+        objectInstance.set('title', details.title);
         objectInstance.set('subtitle', details.subtitle);
         objectInstance.set('description', details.description);
         objectInstance.set('day', details.day);
@@ -71,6 +70,11 @@ Stamplay.init('webinars');
         objectInstance.set('email', info.email);
         objectInstance.set('organization', info.organization);
         objectInstance.set('webinar', info.webinar);
+        objectInstance.set('webinarSubtitle', info.webinarSubtitle);
+        objectInstance.set('webinarDay', info.webinarDay);
+        objectInstance.set('webinarDate', info.webinarDate);
+        objectInstance.set('webinarTime', info.webinarTime);
+        objectInstance.set('webinarAMPM', info.webinarAMPM);
         objectInstance.save().then(function(){
           q.resolve();
         });
